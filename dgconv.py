@@ -34,7 +34,8 @@ class DGConv2d(nn.Module):
         self.register_buffer('D', torch.eye(2))
         self.register_buffer('I', torch.ones(2, 2))
         self.K = int(math.log2(in_channels))
-        gate_init = [-1e-8 for _ in range(self.K)]
+        eps = 1e-8
+        gate_init = [eps * random.choice([-1, 1]) for _ in range(self.K)]
         self.register_parameter('gate', nn.Parameter(torch.Tensor(gate_init)))
         self.conv = nn.Conv2d(in_channels, out_channels, kernel_size=kernel_size, stride=stride, padding=padding, dilation=dilation, bias=bias)
         self.in_channels = in_channels
