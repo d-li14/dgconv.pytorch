@@ -1,7 +1,7 @@
 # dgconv.pytorch
 PyTorch implementation of Dynamic Grouping Convolution and Groupable ConvNet in [Differentiable Learning-to-Group Channels via Groupable Convolutional Neural Networks](https://arxiv.org/abs/1908.05867).
 
-![](figs/Dynamic_Conv.png)
+<p align="center"><img src="figs/Dynamic_Conv.png" width="500" /></p>
 
 * *Kronecker Product* is utilized to construct the sparse matrix efficiently and regularly.
 * Discrete optimization is solved with the *Straight-Through Estimator* trick.
@@ -16,7 +16,7 @@ PyTorch implementation of Dynamic Grouping Convolution and Groupable ConvNet in 
 | [ResNeXt-50 (32x4d)](https://drive.google.com/open?id=1zVQm-aoJV6GRi-mCds7B8HVcsI8Jbjim) | cosine (120 epochs) | 78.198 / 93.916        |
 | [G-ResNeXt](https://drive.google.com/open?id=1elM-FVacE-Pkin_hCiW24oKCogHEaYRn) | cosine (120 epochs) | 78.592 / 94.106        |
 
-![](figs/ablation.png)
+<p align="center"><img src="figs/ablation.png" width="500" /></p>
 
 ## Citation
 
